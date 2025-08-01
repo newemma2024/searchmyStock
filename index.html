@@ -28,19 +28,19 @@
   <div class="container">
     <div>
       <h3>Bing</h3>
-      <iframe id="株テック"></iframe>
+      <iframe id="01"></iframe>
     </div>
     <div>
       <h3>Wikipedia</h3>
-      <iframe id="皆の株"></iframe>
+      <iframe id="02"></iframe>
     </div>
     <div>
       <h3>YouTube</h3>
-      <iframe id="株探"></iframe>
+      <iframe id="03"></iframe>
     </div>
     <div>
       <h3>知乎</h3>
-      <iframe id="Microsoft"></iframe>
+      <iframe id="04"></iframe>
     </div>
   </div>
 
@@ -50,10 +50,10 @@
       if (!keyword) return;
 
       const encoded = encodeURIComponent(keyword);
-      document.getElementById('株テック').src = `https://minkabu.jp/stock/${encoded}`;
-      document.getElementById('皆の株').src = `https://en.wikipedia.org/wiki/Special:Search?search=${encoded}`;
-      document.getElementById('株探').src = `https://www.youtube.com/results?search_query=${encoded}`;
-      document.getElementById('Microsoft').src = `https://www.bing.com/search?q=${encoded}`;
+      document.getElementById('01').src = `https://minkabu.jp/stock/${encoded}`;
+      document.getElementById('02').src = `https://en.wikipedia.org/wiki/Special:Search?search=${encoded}`;
+      document.getElementById('03').src = `https://www.youtube.com/results?search_query=${encoded}`;
+      document.getElementById('04').src = `https://www.bing.com/search?q=${encoded}`;
     }
   </script>
 </body>
