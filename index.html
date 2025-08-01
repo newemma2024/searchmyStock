@@ -51,9 +51,9 @@
 
       const encoded = encodeURIComponent(keyword);
       document.getElementById('01').src = `https://www.kabutec.jp/company/i.php?code=${encoded}`;
-      document.getElementById('02').src = `https://minkabu.jp/search?q=${encoded}`;
-      document.getElementById('03').src = `https://kabutan.jp/search?q=${encoded}`;
-      document.getElementById('04').src = `https://www.bing.com/search?q=${encoded}`;
+      document.getElementById('02').src = `https://minkabu.jp/stock/${encoded}`;
+      document.getElementById('03').src = `https://kabutan.jp/stock/?code=${encoded}`;
+      document.getElementById('04').src = `https://www.bing.com/search?q=stock+${encoded}`;
     }
   </script>
 </body>
