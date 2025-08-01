@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>多网站搜索工具</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input { width: 300px; padding: 8px; }
+    button { padding: 8px 12px; }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h2>🔍 多网站搜索工具</h2>
+  <input type="text" id="keyword" placeholder="请输入关键词">
+  <button onclick="search()">搜索</button>
+
+  <div class="container">
+    <div>
+      <h3>Bing</h3>
+      <iframe id="bing"></iframe>
+    </div>
+    <div>
+      <h3>Wikipedia</h3>
+      <iframe id="wiki"></iframe>
+    </div>
+    <div>
+      <h3>YouTube</h3>
+      <iframe id="youtube"></iframe>
+    </div>
+    <div>
+      <h3>知乎</h3>
+      <iframe id="zhihu"></iframe>
+    </div>
+  </div>
+
+  <script>
+    function search() {
+      const keyword = document.getElementById('keyword').value.trim();
+      if (!keyword) return;
+
+      const encoded = encodeURIComponent(keyword);
+      document.getElementById('bing').src = `https://www.bing.com/search?q=${encoded}`;
+      document.getElementById('wiki').src = `https://en.wikipedia.org/wiki/Special:Search?search=${encoded}`;
+      document.getElementById('youtube').src = `https://www.youtube.com/results?search_query=${encoded}`;
+      document.getElementById('zhihu').src = `https://www.zhihu.com/search?type=content&q=${encoded}`;
+    }
+  </script>
+</body>
+</html>
