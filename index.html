@@ -31,7 +31,7 @@
       <iframe id="01"></iframe>
     </div>
     <div>
-      <h3>みんなの株</h3>
+      <h3>Yahoo</h3>
       <iframe id="02"></iframe>
     </div>
     <div>
@@ -51,9 +51,9 @@
 
       const encoded = encodeURIComponent(keyword);
       document.getElementById('01').src = `https://www.kabutec.jp/company/i.php?code=${encoded}`;
-      document.getElementById('02').src = `https://minkabu.jp/stock/${encoded}`;
+      document.getElementById('02').src = `https://finance.yahoo.co.jp/quote/${encoded}$.T`;
       document.getElementById('03').src = `https://kabutan.jp/stock/?code=${encoded}`;
-      document.getElementById('04').src = `https://www.bing.com/search?q=stock+${encoded}`;
+      document.getElementById('04').src = `https://www.msn.com/ja-jp/money/stockdetails/fi-a9fec7?ocid=${encoded}`;
     }
   </script>
 </body>
