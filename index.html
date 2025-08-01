@@ -15,7 +15,7 @@
     }
     iframe {
       width: 100%;
-      height: 400px;
+      height: 200px;
       border: 1px solid #ccc;
     }
   </style>
@@ -28,19 +28,19 @@
   <div class="container">
     <div>
       <h3>Bing</h3>
-      <iframe id="bing"></iframe>
+      <iframe id="株テック"></iframe>
     </div>
     <div>
       <h3>Wikipedia</h3>
-      <iframe id="wiki"></iframe>
+      <iframe id="皆の株"></iframe>
     </div>
     <div>
       <h3>YouTube</h3>
-      <iframe id="youtube"></iframe>
+      <iframe id="株探"></iframe>
     </div>
     <div>
       <h3>知乎</h3>
-      <iframe id="zhihu"></iframe>
+      <iframe id="Microsoft"></iframe>
     </div>
   </div>
 
@@ -50,10 +50,10 @@
       if (!keyword) return;
 
       const encoded = encodeURIComponent(keyword);
-      document.getElementById('bing').src = `https://www.bing.com/search?q=${encoded}`;
-      document.getElementById('wiki').src = `https://en.wikipedia.org/wiki/Special:Search?search=${encoded}`;
-      document.getElementById('youtube').src = `https://www.youtube.com/results?search_query=${encoded}`;
-      document.getElementById('zhihu').src = `https://www.zhihu.com/search?type=content&q=${encoded}`;
+      document.getElementById('株テック').src = `https://www.bing.com/search?q=${encoded}`;
+      document.getElementById('皆の株').src = `https://en.wikipedia.org/wiki/Special:Search?search=${encoded}`;
+      document.getElementById('株探').src = `https://www.youtube.com/results?search_query=${encoded}`;
+      document.getElementById('Microsoft').src = `https://www.zhihu.com/search?type=content&q=${encoded}`;
     }
   </script>
 </body>
