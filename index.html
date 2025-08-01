@@ -5,7 +5,7 @@
   <title>多网站搜索工具</title>
   <style>
     body { font-family: Arial; padding: 20px; }
-    input { width: 300px; padding: 8px; }
+    input { width: 100px; padding: 8px; }
     button { padding: 8px 12px; }
     .container {
       display: grid;
@@ -15,7 +15,7 @@
     }
     iframe {
       width: 100%;
-      height: 200px;
+      height: 300px;
       border: 1px solid #ccc;
     }
   </style>
@@ -50,10 +50,10 @@
       if (!keyword) return;
 
       const encoded = encodeURIComponent(keyword);
-      document.getElementById('株テック').src = `https://www.bing.com/search?q=${encoded}`;
+      document.getElementById('株テック').src = `https://minkabu.jp/stock/${encoded}`;
       document.getElementById('皆の株').src = `https://en.wikipedia.org/wiki/Special:Search?search=${encoded}`;
       document.getElementById('株探').src = `https://www.youtube.com/results?search_query=${encoded}`;
-      document.getElementById('Microsoft').src = `https://www.zhihu.com/search?type=content&q=${encoded}`;
+      document.getElementById('Microsoft').src = `https://www.bing.com/search?q=${encoded}`;
     }
   </script>
 </body>
